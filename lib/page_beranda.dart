@@ -1,4 +1,7 @@
 import 'package:coba/page_bottom_navigation.dart';
+import 'package:coba/page_list_users.dart';
+import 'package:coba/page_search_list.dart';
+import 'package:coba/page_list_berita.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:coba/page_navigation.dart';
@@ -142,6 +145,60 @@ class PageBeranda extends StatelessWidget {
                   color: Colors.green,
                   textColor: Colors.white,
                 ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      //tambahkan code toast
+                      showToast(
+                        'Page Search list',
+                        context: context,
+                        axis: Axis.horizontal,
+                        alignment: Alignment.center,
+                        position: StyledToastPosition.bottom,
+                        toastHorizontalMargin: 28,
+                        fullWidth: true,
+                      );
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PageListUsers()));
+                    },
+                    child: Text(
+                      'Search list',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                    ),
+                    color: Colors.green,
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      //tambahkan code toast
+                      showToast(
+                        'Page Search list',
+                        context: context,
+                        axis: Axis.horizontal,
+                        alignment: Alignment.center,
+                        position: StyledToastPosition.bottom,
+                        toastHorizontalMargin: 28,
+                        fullWidth: true,
+                      );
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PageListBerita()));
+                    },
+                    child: Text(
+                      'List berita',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                    ),
+                    color: Colors.green,
+                    textColor: Colors.white,
+                  ),
 
 
                 ],
